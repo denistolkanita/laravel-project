@@ -3,11 +3,11 @@
 - [x] Lectia 3
 - [x] Lectia 4
 - [x] Lectia 5
-- [ ] Lectia 6
-- [ ] Lectia 7
-- [ ] Lectia 8
-- [ ] Lectia 9
-- [ ] Lectia 10
+- [x] Lectia 6
+- [x] Lectia 7
+- [x] Lectia 8
+- [x] Lectia 9
+- [x] Lectia 10
 - [ ] Lectia 11
 - [ ] Lectia 12
 - [ ] Lectia 13
