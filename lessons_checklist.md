@@ -8,8 +8,8 @@
 - [x] Lectia 8
 - [x] Lectia 9
 - [x] Lectia 10
-- [ ] Lectia 11
-- [ ] Lectia 12
+- [x] Lectia 11
+- [x] Lectia 12
 - [ ] Lectia 13
 - [ ] Lectia 14
 - [ ] Lectia 15
