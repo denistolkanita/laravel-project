@@ -10,7 +10,7 @@
 - [x] Lectia 10
 - [x] Lectia 11
 - [x] Lectia 12
-- [ ] Lectia 13
+- [x] Lectia 13
 - [ ] Lectia 14
 - [ ] Lectia 15
 - [ ] Lectia 16
