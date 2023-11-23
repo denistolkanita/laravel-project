@@ -11,9 +11,9 @@
 - [x] Lectia 11
 - [x] Lectia 12
 - [x] Lectia 13
-- [ ] Lectia 14
-- [ ] Lectia 15
-- [ ] Lectia 16
+- [x] Lectia 14
+- [x] Lectia 15
+- [x] Lectia 16
 - [ ] Lectia 17
 - [ ] Lectia 18
 - [ ] Lectia 19
