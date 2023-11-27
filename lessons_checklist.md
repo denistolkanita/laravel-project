@@ -14,7 +14,7 @@
 - [x] Lectia 14
 - [x] Lectia 15
 - [x] Lectia 16
-- [ ] Lectia 17
+- [x] Lectia 17
 - [ ] Lectia 18
 - [ ] Lectia 19
 - [ ] Lectia 20
