@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\Tag;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Contracts\View\View;
 
@@ -21,15 +22,17 @@ class PostController extends Controller
      */
     public function create(): View
     {
-        return view('posts.create');
+        $categories = Category::all();
+        return view('posts.create', compact('categories'));
     }
 
     public function store(): RedirectResponse
     {
         $data = request()->validate([
-           'title' => 'string',
-           'content' => 'string',
-           'image' => 'string',
+            'title' => 'string',
+            'content' => 'string',
+            'image' => 'string',
+            'category_id' => ''
         ]);
 
         Post::create($data);
@@ -39,7 +42,8 @@ class PostController extends Controller
 
     public function edit(Post $post)
     {
-        return view('posts.edit', compact('post'));
+        $categories = Category::all();
+        return view('posts.edit', compact('post', 'categories'));
     }
 
     public function update(Post $post)
@@ -48,6 +52,7 @@ class PostController extends Controller
             'title' => 'string',
             'content' => 'string',
             'image' => 'string',
+            'category_id' => ''
         ]);
         $post->update($data);
 

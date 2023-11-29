@@ -26,7 +26,18 @@
                 <label for="image">Image</label>
                 <input type="text" class="form-control" id="image" name="image" placeholder="Image" value="{{ $post->image }}">
             </div>
-            <button type="submit" class="btn btn-primary">Update</button>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select class="form-control" id="category" name="category_id">
+                    @foreach($categories as $category)
+                        <option
+                            {{ $category->id === $post->category->id ? ' selected' : '' }}
+                            value="{{ $category->id }}">{{ $category->title }}</option>
+                    @endforeach
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-3">Update</button>
         </form>
     </div>
 @endsection

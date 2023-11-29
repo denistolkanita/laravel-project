@@ -15,7 +15,15 @@
                 <label for="image">Image</label>
                 <input type="text" class="form-control" id="image" name="image" placeholder="Image">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select class="form-control" id="category" name="category_id">
+                    @foreach($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->title }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
         </form>
     </div>
 @endsection
