@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Post;
-use App\Models\PostTag;
 use App\Models\Tag;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Contracts\View\View;
@@ -32,7 +31,7 @@ class PostController extends Controller
     public function store(): RedirectResponse
     {
         $data = request()->validate([
-            'title' => 'string',
+            'title' => 'required|string',
             'content' => 'string',
             'image' => 'string',
             'category_id' => '',
@@ -51,7 +50,9 @@ class PostController extends Controller
     public function edit(Post $post)
     {
         $categories = Category::all();
-        return view('posts.edit', compact('post', 'categories'));
+        $tags = Tag::all();
+
+        return view('posts.edit', compact('post', 'categories', 'tags'));
     }
 
     public function update(Post $post)
@@ -60,8 +61,14 @@ class PostController extends Controller
             'title' => 'string',
             'content' => 'string',
             'image' => 'string',
-            'category_id' => ''
+            'category_id' => '',
+            'tags' => ''
         ]);
+
+        $tags = $data['tags'];
+        unset($data['tags']);
+
+        $post->tags()->sync($tags);
         $post->update($data);
 
         return redirect()->route('post.show', $post->id);
@@ -98,9 +105,6 @@ class PostController extends Controller
         ];
 
         $post = Post::firstOrcreate(['title' => 'Another Title - 1'], $anotherPost);
-
-        dump($post->content);
-        dd('finished');
     }
 
     public function updateOrCreate(): void
@@ -114,7 +118,5 @@ class PostController extends Controller
         ];
 
         $post = Post::updateOrCreate(['title' => 'Title - new'], $anotherPost);
-
-        dd($post->content);
     }
 }
