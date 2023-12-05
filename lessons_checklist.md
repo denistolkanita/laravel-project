@@ -21,9 +21,9 @@
 - [x] Lectia 21
 - [x] Lectia 22
 - [x] Lectia 23
-- [ ] Lectia 24
-- [ ] Lectia 25
-- [ ] Lectia 26
+- [x] Lectia 24
+- [x] Lectia 25
+- [x] Lectia 26
 - [ ] Lectia 27
 - [ ] Lectia 28
 - [ ] Lectia 29
