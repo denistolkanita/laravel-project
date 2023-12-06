@@ -5,13 +5,12 @@ namespace App\Http\Controllers\Post;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
 
-class DestroyController extends Controller
+class DestroyController extends BaseController
 {
     public function __invoke(Post $post)
     {
-        $post = Post::withTrashed()->find(1);
-        $post->restore();
+        $post->delete();
 
-        dd('deleted');
+        return redirect()->route('post.index');
     }
 }

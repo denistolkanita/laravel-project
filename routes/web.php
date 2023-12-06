@@ -38,7 +38,6 @@ Route::group(['namespace' => 'Post'], function () {
     Route::delete('/posts/{post}', [DestroyController::class, '__invoke'])->name('post.delete');
 });
 
-
 Route::get('/main', [MainController::class, 'index'])->name('main.index');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
 Route::get('/about', [AboutController::class, 'index'])->name('about.index');
