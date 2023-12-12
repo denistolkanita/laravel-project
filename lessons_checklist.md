@@ -28,9 +28,9 @@
 - [x] Lectia 28
 - [x] Lectia 29
 - [x] Lectia 30
-- [16:29] Lectia 31
-- [ ] Lectia 32
-- [ ] Lectia 33
+- [x] Lectia 31
+- [x] Lectia 32
+- [x] Lectia 33
 - [ ] Lectia 34
 - [ ] Lectia 35
 - [ ] Lectia 36
