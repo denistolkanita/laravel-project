@@ -13,6 +13,8 @@ class Service
 
         $post = Post::create($data);
         $post->tags()->attach($tags);
+
+        return $post;
     }
 
     public function update(Post $post, array $data)
@@ -22,6 +24,8 @@ class Service
 
         $post->tags()->sync($tags);
         $post->update($data);
+
+        return $post->fresh();
     }
 
 }

@@ -41,7 +41,7 @@ Route::get('/auth', [HomeController::class, 'index'])->name('home');
 Route::group(['namespace' => 'Post'], function () {
     Route::get('/posts', [IndexController::class, '__invoke'])->name('post.index');
     Route::get('/posts/create', [CreateController::class, '__invoke'])->name('post.create');
-    Route::post('/posts/create', [StoreController::class, '__invoke'])->name('post.store');
+    Route::post('/posts', [StoreController::class, '__invoke'])->name('post.store');
     Route::get('/posts/{post}', [ShowController::class, '__invoke'])->name('post.show');
     Route::get('/posts/{post}/edit', [EditController::class, '__invoke'])->name('post.edit');
     Route::patch('/posts/{post}', [UpdateController::class, '__invoke'])->name('post.update');

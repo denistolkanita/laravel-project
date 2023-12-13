@@ -2,18 +2,21 @@
 
 namespace App\Http\Controllers\Post;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\Post\StoreRequest;
-use App\Models\Post;
+use App\Http\Resources\Post\PostResource;
 use Illuminate\Http\RedirectResponse;
 
 class StoreController extends BaseController
 {
-    public function __invoke(StoreRequest $request): RedirectResponse
+    public function __invoke(StoreRequest $request): PostResource
     {
-        $data = $request->validated();
-        $this->service->store($data);
 
-        return redirect()->route('post.index');
+        $data = $request->validated();
+        $post = $this->service->store($data);
+
+
+        return new PostResource($post);
+
+//        return redirect()->route('post.index');
     }
 }
