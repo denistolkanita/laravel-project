@@ -20,7 +20,9 @@ class IndexController extends BaseController
         $filter = app()->make(PostFilter::class, ['queryParams' => array_filter($data)]);
         $posts = Post::filter($filter)->paginate($perPage, ['*'], 'page', $page);
 
-        return PostResource::collection($posts);
-//        return view('posts.index', compact('posts'));
+        return view('posts.index', compact('posts'));
+
+        // Example how to use Resources, REST API example
+        // return PostResource::collection($posts);
     }
 }
