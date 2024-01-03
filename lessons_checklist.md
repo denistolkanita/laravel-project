@@ -31,10 +31,10 @@
 - [x] Lectia 31
 - [x] Lectia 32
 - [x] Lectia 33
-- [ ] Lectia 34
-- [ ] Lectia 35
-- [ ] Lectia 36
-- [ ] Lectia 37
-- [ ] Lectia 38
-- [ ] Lectia 39
+- [x] Lectia 34
+- [x] Lectia 35
+- [x] Lectia 36
+- [x] Lectia 37
+- [x] Lectia 38
+- [x] Lectia 39
 - [ ] Lectia 40
